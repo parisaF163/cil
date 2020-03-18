@@ -1,0 +1,43 @@
+Computing points-to sets...
+t(1) -> malloc
+t(1) -> malloc
+tmp(1) -> malloc
+st(1) -> malloc
+Total number of things pointed to: 4
+Method(o_new,void (void))
+st -> struct state_t * : o_new
+st -> struct state_t * : o_new
+st -> struct state_t * : global
+Method(o_add,int (int v ))
+i -> int  : o_add
+i -> int  : o_add
+st -> struct state_t * : o_add
+st -> struct state_t * : o_add
+st -> struct state_t * : o_add
+st -> struct state_t * : o_add
+st -> struct state_t * : global
+rv -> int  : o_add
+rv -> int  : o_add
+rv -> int  : o_add
+Method(o_rm,int (int v ))
+i -> int  : o_rm
+i -> int  : o_rm
+st -> struct state_t * : o_rm
+st -> struct state_t * : o_rm
+st -> struct state_t * : global
+rv -> int  : o_rm
+rv -> int  : o_rm
+Method(o_contains,int (int v ))
+i -> int  : o_contains
+i -> int  : o_contains
+st -> struct state_t * : global
+rv -> int  : o_contains
+rv -> int  : o_contains
+Method(o_isempty,int (void))
+st -> struct state_t * : global
+Method(o_add4,int (int *t ))
+st -> struct state_t * : global
+t -> int * : o_add4
+Method(main,int (void))
+st -> struct state_t * : global
+t -> int * : main

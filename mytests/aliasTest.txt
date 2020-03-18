@@ -1,0 +1,13 @@
+Computing points-to sets...
+t(1) -> st
+u(1) -> st
+Total number of things pointed to: 2
+Method(o_add4,void (int *u ))
+st -> int  : global
+u -> int * : o_add4
+Method(temp,void (char *u ))
+st -> int  : global
+u -> char * : temp
+Method(main,int (void))
+st -> int  : global
+t -> int * : main
